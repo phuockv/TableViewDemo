@@ -8,6 +8,10 @@
 import UIKit
 
 class ContriesTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var contentImage: UIImageView!
+    @IBOutlet weak var contentLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

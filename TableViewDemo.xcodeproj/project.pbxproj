@@ -15,6 +15,8 @@
 		C7052F2525E92B7100974C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7052F2325E92B7100974C81 /* LaunchScreen.storyboard */; };
 		C7052F3025E92B7200974C81 /* TableViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7052F2F25E92B7200974C81 /* TableViewDemoTests.swift */; };
 		C7052F3B25E92B7200974C81 /* TableViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7052F3A25E92B7200974C81 /* TableViewDemoUITests.swift */; };
+		C7052F4C25E92C9000974C81 /* ContriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7052F4B25E92C9000974C81 /* ContriesTableViewCell.swift */; };
+		C7052F5225E92F8800974C81 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7052F5125E92F8800974C81 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C7052F3625E92B7200974C81 /* TableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7052F3A25E92B7200974C81 /* TableViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDemoUITests.swift; sourceTree = "<group>"; };
 		C7052F3C25E92B7200974C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7052F4B25E92C9000974C81 /* ContriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContriesTableViewCell.swift; sourceTree = "<group>"; };
+		C7052F5125E92F8800974C81 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		C7052F1725E92B6D00974C81 /* TableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C7052F5025E92F7500974C81 /* Model */,
 				C7052F1825E92B6D00974C81 /* AppDelegate.swift */,
 				C7052F1A25E92B6D00974C81 /* SceneDelegate.swift */,
 				C7052F1C25E92B6D00974C81 /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				C7052F2125E92B7100974C81 /* Assets.xcassets */,
 				C7052F2325E92B7100974C81 /* LaunchScreen.storyboard */,
 				C7052F2625E92B7100974C81 /* Info.plist */,
+				C7052F4B25E92C9000974C81 /* ContriesTableViewCell.swift */,
 			);
 			path = TableViewDemo;
 			sourceTree = "<group>";
@@ -126,6 +132,14 @@
 				C7052F3C25E92B7200974C81 /* Info.plist */,
 			);
 			path = TableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		C7052F5025E92F7500974C81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7052F5125E92F8800974C81 /* Country.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7052F4C25E92C9000974C81 /* ContriesTableViewCell.swift in Sources */,
 				C7052F1D25E92B6D00974C81 /* ViewController.swift in Sources */,
 				C7052F1925E92B6D00974C81 /* AppDelegate.swift in Sources */,
+				C7052F5225E92F8800974C81 /* Country.swift in Sources */,
 				C7052F1B25E92B6D00974C81 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
