@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
         self.tableView.estimatedSectionHeaderHeight = 250
+        
+     
+        self.tableView.sectionFooterHeight = UITableView.automaticDimension
+        self.tableView.estimatedSectionFooterHeight = 22
     }
 
 
@@ -85,8 +89,27 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return headerView
 
     }
-  
-
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height:  tableView.frame.size.height))
+        let labelf = UILabel()
+        labelf.translatesAutoresizingMaskIntoConstraints = false
+        footerView.addSubview(labelf)
+        NSLayoutConstraint.activate([
+            labelf.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 20),
+            labelf.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -20),
+            labelf.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 10),
+            labelf.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -10)
+        ])
+        if section == 0 {
+            footerView.backgroundColor = .orange
+            labelf.text = "Footer 1"
+        } else {
+            footerView.backgroundColor = .green
+            labelf.text = "Footer 2"
+        }
+        return footerView
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(countries[indexPath.row])
     }
