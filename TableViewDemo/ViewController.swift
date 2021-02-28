@@ -33,12 +33,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.isEditing = true
+       // tableView.isEditing = true
         
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
         self.tableView.estimatedSectionHeaderHeight = 250
         
-     
+        
+
         self.tableView.sectionFooterHeight = UITableView.automaticDimension
         self.tableView.estimatedSectionFooterHeight = 22
     }
@@ -111,7 +112,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(countries[indexPath.row])
+        let vc = CollectionViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
 
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
